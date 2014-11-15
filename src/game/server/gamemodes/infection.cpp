@@ -34,11 +34,11 @@ void CGameControllerINF::Tick()
 	}
 
 	if(PlayerIngame < 3)
+	{
 		if(Server()->Tick() % Server()->TickSpeed() == 0) // Send notification every second
-		{
 			GameServer()->SendBroadcast("You need at least 3 players to start a game", -1);
-			return;
-		}
+		return;
+	}
 	//TODO: Restart the game when map changes or similar things
 
 	//choose random start zombie

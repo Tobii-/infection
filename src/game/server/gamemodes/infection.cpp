@@ -162,22 +162,6 @@ int CGameControllerINF::OnCharacterDeath(CCharacter *pVictim, CPlayer *pKiller, 
 	return 0;
 }
 
-void CGameControllerINF::OnPlayerInfoChange(CPlayer *pP)
-{
-	pP->m_TeeInfos.m_UseCustomColor = 1;
-	if(pP->m_Infected)
-	{
-		/* 391726, 1769216, 65310, 9240320 */
-		pP->m_TeeInfos.m_ColorBody = 0x2EFA05;
-		pP->m_TeeInfos.m_ColorFeet = 0x2EFA05;
-	}
-	else
-	{
-		pP->m_TeeInfos.m_ColorBody = 0xFF;
-		pP->m_TeeInfos.m_ColorFeet = 0xFF;
-	}
-}
-
 void CGameControllerINF::StartRound()
 {
 	IGameController::StartRound();

@@ -23,7 +23,6 @@ public:
 	//Called when somebody gets caught by zombie or really die
 	virtual int OnCharacterDeath(CCharacter *pVictim, CPlayer *pKiller, int Weapon);
 
-	virtual void OnPlayerInfoChange(CPlayer *pP);
 	virtual void StartRound();
 	virtual void EndRound();
 
